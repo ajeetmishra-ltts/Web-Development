@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<style >
+	.main{
+background-color: #0000A0;
+color: white;
+padding: 3px;
+margin: 5px;
+border: 2px solid gray;
+}
+body{
+	text-align: center;
+}
+
+.rest{
+background-color:  #0000A0;
+border: 2px solid gray;
+padding: 15px;
+margin: 3px;
+}
+.form1{
+background-color: #ADD8E6;
+color: grey;
+padding: 8px;
+margin: 5px;
+border: 2px solid gray;
+font-style: italic;
+}
+
+
+
+
+
+
+
+
+
+
+</style>
+<body>
+<div  class="main" >
+<h2  align="center">PLAYERS DETAILS</h2><br></a>
+</div>
+<div  class="form1" >
+<form align="center">
+<p>
+<label>Name &nbsp
+<input   type="text"  id="name" placeholder="Enter your name" required>
+</label>
+
+</p>
+<p>
+<label>DOB &nbsp &nbsp &nbsp &nbsp
+<input type="date" id="dob" placeholder="DD/MM/YY" required>
+</label> 
+</p>
+
+<p>
+<label>Age &nbsp &nbsp
+<input type="age"  id="age" placeholder="Enter your age" required>
+</label> 
+</p>
+
+<p>
+<label>Email &nbsp
+<input type="email" id="email" placeholder="abc12@xyz.com"name="email_address">
+</label>
+</p>
+
+<p>
+<label>Country &nbsp &nbsp &nbsp &nbsp &nbsp
+<select>
+<option >INDIA</option>
+<option >AMERICA</option>
+<option >CHINA<option>
+<option >RUSSIA</option>
+</select>
+</label> 
+</p>
+
+SKILL &nbsp
+<label> <input type="checkbox" id="skill" > Batting </label>
+<label> <input type="checkbox" > Bowling </label></label>
+
+<p>BAT STYLE &nbsp
+<label> <input type="radio" id="bat"> Right Handed </label>
+<label> <input type="radio" id="bat"> Left Handed </label></p>
+
+BOWL STYLE
+<label> <input type="radio" id="bowl"> Right Handed </label>
+<label> <input type="radio"  id="bowl"> Left Handed </label>
+
+<p>
+<label>Matches &nbsp
+<input type="text"   id="matches" placeholder="Matches played" required>
+</label> 
+</p>
+
+<p>
+<label>Runs &nbsp
+<input type="text"  id="run" placeholder="Total runs scored" required>
+</label> 
+</p>
+
+<p>
+<label>Wickets &nbsp
+<input type="text"   id="wicket" placeholder="Wickets" required>
+</label> 
+</p>
+
+<p>
+<label>Achievements &nbsp
+<textarea  id="achieve"name="comments" maxlength="1000" placeholder="Your Achievements in cricket"></textarea>
+</label>
+</p>
+</div>
+<div class="rest"  id="submitid"><button>Submit</button><button>Reset</button>
+<p align="center"  id="reset"></p>
+</div>
+
+</form>
+</body>
+</html>
