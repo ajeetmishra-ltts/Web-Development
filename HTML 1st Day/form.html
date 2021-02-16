@@ -4,17 +4,22 @@
 	<title></title>
 </head>
 <style >
-	.main{
+.main{
 background-color: #0000A0;
 color: white;
 padding: 3px;
 margin: 5px;
 border: 2px solid gray;
+width: 500px;
+  clear: both;
+}
+.main {
+  width: 100%;
+  clear: both;
 }
 body{
 	text-align: center;
 }
-
 .rest{
 background-color:  #0000A0;
 border: 2px solid gray;
@@ -24,96 +29,103 @@ margin: 3px;
 .form1{
 background-color: #ADD8E6;
 color: grey;
-padding: 8px;
+padding: 15px 20px;
 margin: 5px;
 border: 2px solid gray;
 font-style: italic;
+width: 100%;
+
+
+display: inline-block;
+    margin-left: 10px;
+    
+    min-width: 110px;
+
+
+	
+
+
+
+
 }
-
-
-
-
-
-
-
-
-
+.star{
+color:red;
+}
 
 </style>
 <body>
 <div  class="main" >
 <h2  align="center">PLAYERS DETAILS</h2><br></a>
 </div>
+
 <div  class="form1" >
 <form align="center">
-<p>
-<label>Name &nbsp
+<br>
+<label><span>Name<sup class="star" >*</sup> </span>          
 <input   type="text"  id="name" placeholder="Enter your name" required>
-</label>
-
-</p>
-<p>
-<label>DOB &nbsp &nbsp &nbsp &nbsp
+</label></br>
+</span>
+<br>
+<label><span>DOB<sup class="star" >*</sup> </span>                                                     
 <input type="date" id="dob" placeholder="DD/MM/YY" required>
 </label> 
-</p>
-
+</br>
 <p>
-<label>Age &nbsp &nbsp
+<label><span>Age <sup class="star" >*</sup> </span>&nbsp; &nbsp;
 <input type="age"  id="age" placeholder="Enter your age" required>
 </label> 
 </p>
 
 <p>
-<label>Email &nbsp
+<label><span>Email <sup class="star" >*</sup> </span>&nbsp
 <input type="email" id="email" placeholder="abc12@xyz.com"name="email_address">
 </label>
 </p>
 
 <p>
-<label>Country &nbsp &nbsp &nbsp &nbsp &nbsp
+<label><span>Country<sup class="star" >*</sup></span>&emsp;&nbsp;
 <select>
 <option >INDIA</option>
 <option >AMERICA</option>
-<option >CHINA<option>
+<option >CHINA</option>
 <option >RUSSIA</option>
 </select>
 </label> 
 </p>
 
-SKILL &nbsp
+<span>SKILL <sup class="star" >*</sup> </span>&nbsp
 <label> <input type="checkbox" id="skill" > Batting </label>
 <label> <input type="checkbox" > Bowling </label></label>
 
-<p>BAT STYLE &nbsp
+<p><span>BAT STYLE<sup class="star" >*</sup> </span> &nbsp
 <label> <input type="radio" id="bat"> Right Handed </label>
 <label> <input type="radio" id="bat"> Left Handed </label></p>
 
-BOWL STYLE
+<span>BOWL STYLE<sup class="star" >*</sup> </span>
 <label> <input type="radio" id="bowl"> Right Handed </label>
 <label> <input type="radio"  id="bowl"> Left Handed </label>
 
 <p>
-<label>Matches &nbsp
+<label><span>Matches <sup class="star" >*</sup> </span>&nbsp
 <input type="text"   id="matches" placeholder="Matches played" required>
 </label> 
 </p>
 
 <p>
-<label>Runs &nbsp
+<label><span>Runs <sup class="star" >*</sup> </span>&nbsp
 <input type="text"  id="run" placeholder="Total runs scored" required>
 </label> 
 </p>
 
 <p>
-<label>Wickets &nbsp
+<label><span>Wickets<sup class="star" >*</sup> </span> &nbsp
 <input type="text"   id="wicket" placeholder="Wickets" required>
 </label> 
 </p>
 
 <p>
-<label>Achievements &nbsp
-<textarea  id="achieve"name="comments" maxlength="1000" placeholder="Your Achievements in cricket"></textarea>
+<label><span>Achievements<sup class="star" >*</sup> </span> &nbsp
+<textarea  rows="4" cols="30" id="achieve"name="comments" maxlength="500" placeholder="Your Achievements in cricket"></textarea>
 </label>
 </p>
 </div>
