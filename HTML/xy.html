@@ -1,0 +1,116 @@
+<!Doctype html>
+<html>
+<head>
+
+</head>
+<body>
+
+ <!Doctype html>
+<html>
+<head>
+<style>
+.f{
+  text-align: center;
+  margin: 5px 550px 0 550px;
+  background-color:#FFE87C;
+  border:solid;
+  padding: 20px;
+  margin: 5px 550px 5px 550px;
+}
+.t {
+  margin-left: auto;
+  margin-right: auto;
+}
+  .to{
+    width: 200px;
+    padding: 2px;
+    font-size: 25px;
+  }
+  .bu{
+    width: 50px;
+    height: 30px;
+  position: absolute;
+  left: 38%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  }
+  .bot{
+    font-size: 18px;
+    text-align: left;
+    padding: 3px;
+  }
+</style>
+</head>
+<body>
+<div class = "f">
+ <form>
+  <table class = "t" border='0' width='440px' cellpadding='0' cellspacing='0' align='center'>
+    <tr><td colspan="2" align="center"><p class="to"><b>Match Summary</b></p></td></tr>
+    
+    <tr> 
+    <td align='center' style="color: #708090;"><i>Team A<superscript style="color: red;">*</superscript></i></td>
+    <td style = "text-align: center;"><input type="text" id="teama" name="teama" placeholder="Team A" style="width: 200px;" autofocus><br></td>
+    </tr>
+
+    <tr> <td>&nbsp;</td> </tr>
+    
+    <tr>
+    <td align='center' style="color: #708090;"><i>Team B<superscript style="color: red;">*</superscript></i></td>
+    <td><input type="text" id="teamb" name="teamb" placeholder = "Team B" style="width: 200px;"><br></td>
+    </tr>
+    <tr> <td>&nbsp;</td> </tr>
+    <tr>
+      <td align='center' style="color: #708090;"><i>Date<superscript style="color: red;">*</superscript></i></td>
+    <td><input type="text" id="date" name="date" pattern=\d{1,2}/\d{1,2}/\d{4 placeholder = "DD/MM/YYYY" style="width: 200px;"><br></td>
+    </tr>
+    <tr> <td>&nbsp;</td> </tr>
+    <tr>
+      <td align='center' style="color: #708090;" ><i>Time<superscript style="color: red;">*</superscript></i></td>
+      <td><input type="time" id="time" name="time" value="00:00:00" placeholder="HH:MM:SS" step="1" style="width: 200px;"><br></td>
+    </tr>
+    <tr> <td>&nbsp;</td> </tr>   
+    <tr>
+      <td align='center' style="color: #708090;" ><i>Team A Score<superscript style="color: red;">*</superscript></i></td>
+      <td><input type="text" id="scoreA" name="scoreA" placeholder = "Runs/Wkts" style="width: 200px;"><br></td>
+    </tr>
+    <tr> <td>&nbsp;</td> </tr>
+
+    <tr>
+      <td align='center' style="color: #708090;"><i>Team B Score<superscript style="color: red;">*</superscript></i></td>
+      <td><input type="text" id="scoreB" name="scoreB" placeholder = "Runs/Wkts" style="width: 200px;"><br></td>
+    </tr>
+    <tr> <td>&nbsp;</td> </tr>
+  <tr><th colspan="2"><input type="submit" name="" onclick="myFunction();return false" value="save">
+  </th></tr>
+  
+  <tr><th>Winning team :</th>
+ <th align="left"><p type id="demo"></p> </th>
+</tr>
+</form>
+<table>
+
+
+</body></table>
+
+</div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("scoreA").value;
+  var y = document.getElementById("scoreB").value;
+  var z = document.getElementById("teama").value
+  var a = document.getElementById("teamb").value
+  if (x>y) {
+  document.getElementById("demo").innerHTML= z;
+}
+else
+{
+  document.getElementById("demo").innerHTML= a;
+}
+}
+</script>
+
+</body>
+</html>
+</body>
+</html>
