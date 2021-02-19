@@ -19,10 +19,10 @@ background-size: cover;
   <br><br><br><br><h1 style="color: white">Find your Current location</h1>  
  <br><input  button onclick="getlocation()" type="image" id="image" alt="Login" src="geo.jpg">
  <section class="main-section" id="top3">
-        <a style="text-decoration:none"  href="file:///C:/Users/CTEA/Desktop/HTML/Bootstrap/bootcontact.html">
+        <a style="text-decoration:none"  href="bootcontact.html">
             <input type="submit" value="CONTACT US!!"    name="Mask Survey Publication"><h2 style = " color: white"></h2></a>
 </section>
-  <a style="text-decoration:none"  href="file:///C:/Users/CTEA/Desktop/HTML/Bootstrap/bootnav.html"><input type="submit" value="Mask Survey Publication"    name="Mask Survey Publication"><h2 style = " color: white"></h2></a>
+  <a style="text-decoration:none"  href="bootnav.html"><input type="submit" value="Mask Survey Publication"    name="Mask Survey Publication"><h2 style = " color: white"></h2></a>
 
 
 
@@ -44,7 +44,7 @@ background-size: cover;
                 alert("Sorry! your Browser does not support Geolocation API")
             }
         } 
-        //Showing Current Poistion on Google Map
+        
         function showPos(position){ 
             latt = position.coords.latitude; 
             long = position.coords.longitude; 
@@ -60,7 +60,7 @@ background-size: cover;
             new google.maps.Marker({position:lattlong, map:maps, title:"You are here!"}); 
         } 
 
-        //Handling Error and Rejection
+      
              function showErr(error) {
               switch(error.code){
               case error.PERMISSION_DENIED:
@@ -84,9 +84,10 @@ background-size: cover;
         
         <nav aria-label="Page navigation example">
   <ul class="pagination">
-     <li class="page-item"><a class="page-link" href="file:///C:/Users/CTEA/Desktop/HTML/Bootstrap/bootvideo.html">Previous</a></li>
-      <li class="page-item"><a class="page-link" href=" file:///C:/Users/CTEA/Desktop/HTML/Bootstrap/bootnav.html">1</a></li>
-    <li class="page-item"><a class="page-link" href="file:///C:/Users/CTEA/Desktop/HTML/Bootstrap/bootcontact.html">2</a></li>
+     <li class="page-item"><a class="page-link" href="bootvideo.html">Previous</a></li>
+     
+    <li class="page-item"><a class="page-link" href="bootcontact.html">1</a></li>
+     <li class="page-item"><a class="page-link" href="bootnav.html">Next</a></li>
   </ul>
 </nav>
 
