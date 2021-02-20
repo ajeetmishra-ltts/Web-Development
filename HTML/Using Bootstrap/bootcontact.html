@@ -15,12 +15,10 @@
 <body>
 
 <div class="container">
-
-
 <div class="container-fluid">
     <div class="container">
         <div class="row">
-            <div class="col-md-8 col-md-offset-4">
+            <div class="col-md-7 col-md-offset-4">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h3 class="text-center">Contact us</h3>
@@ -35,7 +33,7 @@
                                             <label for="name">Name</label>
                                         </div>
                                         <div class="col-md-8">
-                                            <input type="text" id="name" class="form-control" placeholder="Type your name here">
+                                            <input type="text" id="name" class="form-control" placeholder="Type your name here" required>
                                         </div>
                                     </div>
                                     <div class="form-group row">
@@ -43,7 +41,7 @@
                                             <label for="lastName">Last name</label>
                                         </div>
                                         <div class="col-md-8">
-                                            <input type="text" id="lastName" class="form-control" placeholder="Type your last name here">
+                                            <input type="text" id="lastName" class="form-control" placeholder="Type your last name here" required>
                                         </div>
                                     </div>
                                     <div class="form-group row">
@@ -51,7 +49,7 @@
                                             <label for="email">E-mail</label>
                                         </div>
                                         <div class="col-md-8">
-                                            <input type="text" id="email" class="form-control" placeholder="Type your e-mail">
+                                            <input type="text" id="email" class="form-control" placeholder="Type your e-mail" required>
                                         </div>
                                     </div>
                                     <div class="form-group row">
@@ -59,9 +57,27 @@
                                             <label for="phone">Phone</label>
                                         </div>
                                         <div class="col-md-8">
-                                            <input type="text" id="phone" class="form-control" placeholder="So we can reach you">
+                                            <input type="text" id="phone" class="form-control" placeholder="So we can reach you"required>
                                         </div>
                                     </div>
+
+
+
+
+
+
+
+  <div class="form-group row">
+                                        <div class="col-md-4">
+                                            <label for="message">Message</label>
+                                        </div>
+
+
+                                           <div class="col-md-8">
+                                            <input type="text" id="message" class="form-control" placeholder="Type your message"required>
+                                        </div>
+                                    </div>
+
                                     <div class="form-group row">
                                         <p class="text-center">We are sorry if you are experiecing any problems. We will try our best to reach you in 24h. </p>
                                     </div>
@@ -70,12 +86,58 @@
                                         </div>
                                         <div class="col-md-8">
                                             <script>
-  function clickAlert() {
-    alert("Your resposne has been submitted");
-}
+
+
+function validate(){
+  var name = document.getElementById("name").value;
+  var lastname = document.getElementById("lastName").value;
+  var phone = document.getElementById("phone").value;
+  var email = document.getElementById("email").value;
+  var message = document.getElementById("message").value;
+  var error_message = document.getElementById("error_message");
+  
+  error_message.style.padding = "10px";
+  
+  var text;
+  if(name.length < 5){
+    text = "Please Enter valid Name";
+    error_message.innerHTML = text;
+    return false;
+  }
+  if(subject.length < 10){
+    text = "Please Enter Correct Subject";
+    error_message.innerHTML = text;
+    return false;
+  }
+  if(isNaN(phone) || phone.length != 10){
+    text = "Please Enter valid Phone Number";
+    error_message.innerHTML = text;
+    return false;
+  }
+  if(email.indexOf("@") == -1 || email.length < 6){
+    text = "Please Enter valid Email";
+    error_message.innerHTML = text;
+    return false;
+  }
+  if(message.length <= 140){
+    text = "Please Enter More Than 140 Characters";
+    error_message.innerHTML = text;
+    return false;
+  }
+  alert("Form Submitted Successfully!");
+  return true;
+}    
+
 </script>
 
-<input type="button" onclick="clickAlert()" value="Submit response"><nav aria-label="Page navigation example">
+<script type="text/javascript">
+            function clickAlert(){
+                alert("Your response has been submitted.Thank You!!");
+            }
+        </script>
+
+
+<input type="button" id="submitform" onclick="clickAlert()" value="Submit response"><nav aria-label="Page navigation example">
   <ul class="pagination">
      <li class="page-item"><a class="page-link" href="bootvideo.html">Previous</a></li>
       <li class="page-item"><a class="page-link" href="bootnav.html">1</a></li>
@@ -98,10 +160,10 @@
                                             <div class="social row">
                                                 <div class="btn-group btn-group-justified">
                                                    <ul class="social-icons">
-    <li><a href="http://www.facebook.com"><img src='1.jpg' ></a></li>
-    <li><a href="http://www.google.com"><img src='2.png' ></a></li>
-    <li><a href="http://www.twitter.com"><img src='3.png' ></a></li>
-    <li><a href="http://www.youtube.com"><img src='4.png' ></a></li>
+    <li><a href="http://www.facebook.com"><img src='fb.png' ></a></li>
+    <li><a href="http://www.google.com"><img src='google.png' ></a></li>
+    <li><a href="http://www.twitter.com"><img src='twitter.png' ></a></li>
+    <li><a href="http://www.youtube.com"><img src='youtube.png' ></a></li>
 </ul>
                                                 </div>
                                             </div>
@@ -133,10 +195,11 @@
 <style>
     body {
         font-family: 'PT Sans', sans-serif;
+     background-image: url(contactmain.jpg);
     }
 
     .container-fluid {
-        background: url("https://prepbootstrap.com/Content/images/shared/misc/contact-us.png");
+       
         background-repeat: no-repeat;
         background-size: cover;
         min-height: 100%;
