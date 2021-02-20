@@ -1,59 +1,70 @@
 
-<html>
-    <head>
-<style >
-.score{
-                background-color: pink;
-                margin: 200px 500px 0px 500px;
-            }
-            div > h1{
-                text-align: center;
-            }
-            div > h3{
-                text-align: center;
-            }
-            div > table {
-                margin-left: auto;
-                margin-right: auto;
-            }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="score.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Score Meter</title>
+</head>
+<body>
+    <div class="container">
+    <form id="myform">
+        <div class="form-group">
+    <h1>SCORE METER</h1>
+    <h2>Enter the number of singles, doubles, triples, fours and sixes</h2>
+    <h3>Enter the score Details - </h3> 
+    <input type="text" class="form-control" id="score">
+    <button id="myBtn" onclick="getScore();return false;">Submit</button>
+    <h3>Total Score</h3>
+    <p id="score1"></p>
+</form>
 
-</style>
-<script>
-            function fort()
-            {
-            var sc= document.getElementById("score").value;
-            var temp= new Array();
-            temp = sc.split(',');
-            var i=0;
-            var j=0;
-            var sum=0;
-            var arr=[1,2,3,4,6]
-            for(i;i<temp.length;i++)
-            {
-                temp[i]=parseInt(temp[i],10);
-            }
-            for(j;j<temp.length;j++)
-            {
-                sum+=Number(temp[j])*arr[j];
-            }
-            document.getElementById("fol").innerHTML=sum;
-            }
-        </script>
-    </head>
-     <div class = "score">
-        <center>
-            <h1><strong>SCORE METER</strong></h1><br><br>
-            <p><strong>(Enter the number of singles, double, triple, fours and sixes in comma seperated format.)</strong></p><br><br><br><br>
-            <h3>ENTER THE SCORE DETAILS:</h3>
-            <input type="text" id="score" name="score"><br><br>
-            <input type="submit" onclick="fort()" value="Get Score">
+    </div>
+    <script>
+        
+        function getScore()
+        {
+         var x = document.getElementById("score").value;
+         var res=x.split(",");
+         var sum = 0;
+         count=1;
+for (var i = 0; i < res.length; i++) {
+  sum += parseInt(res[i])*count;
+  if(count==4)
+  count=count+2;
+  else
+  count++;
+         document.getElementById("score1").innerHTML=sum;
+}
+        }
 
-            <h2>Total Score:</h2><p id="fol"></p>
-        </center>
-    </body>
+</script>
+</body>
 </html>
 
-
-
-
+<style>
+div{
+    text-align: center;
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 8%;
+    background-color: pink;
+}
+#myBtn
+{
+    border-style: groove;
+    margin: 1rem;
+}
+h2{
+    font-style: italic;
+}
+body{
+    background:#fff;
+}
+</style>
 
